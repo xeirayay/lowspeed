@@ -83,9 +83,9 @@ export const INITIAL_PRODUCTS: Product[] = [
     stock: 3,
     images: [
       'https://cdn.phototourl.com/member/2026-06-20-1318cfdd-7daa-4a27-bf12-3d83b0b0a1db.png',
-      'https://cdn.phototourl.com/member/2026-06-20-40273273-32a9-4cf2-9b8b-42d49096898e.png',
+      'https://cdn.phototourl.com/member/2026-06-21-9abd20bd-d1f8-4df9-bed4-dbe3a292bb3b.png',
       'https://cdn.phototourl.com/member/2026-06-20-c204c673-100e-43ae-84ab-19f4812aeab5.png',
-      'https://cdn.phototourl.com/member/2026-06-20-b43095e3-83ce-4088-8bda-320924e04421.png',
+      'https://cdn.phototourl.com/member/2026-06-21-f7e3a2dc-3063-4ef5-bc76-a4d5ed742211.png',
       'https://cdn.phototourl.com/member/2026-06-21-370e83cc-20aa-4d5d-bbbb-ac44457ca26e.jpg'
     ],
     createdAt: Date.now() - 20000
