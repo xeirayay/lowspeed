@@ -1,0 +1,6 @@
+{
+  "name": "Lowspeed",
+  "description": "Platform e-commerce premium bertema Liquid Glass (iOS 26) untuk otomotif supercars, superbike, suku cadang, dan pelayanan jasa.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
