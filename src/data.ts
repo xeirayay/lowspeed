@@ -219,7 +219,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     category: 'Motor',
     price: 50000,
     description: 'Info lebih lengkap tentang model ini ada di discord!',
-    stock: 5,
+    stock: 10,
     images: [
       gen11,
       gen12,
@@ -330,9 +330,9 @@ export const INITIAL_PRODUCTS: Product[] = [
     id: 'prod-motor-9',
     name: 'Honda Pcx - 150',
     category: 'Motor',
-    price: 25000,
+    price: 20000,
     description: 'Info lebih lengkap tentang model ini ada di discord!',
-    stock: 5,
+    stock: 10,
     images: [
       pcx,
       pcx2,
@@ -380,9 +380,9 @@ export const INITIAL_PRODUCTS: Product[] = [
     id: 'prod-motor-12',
     name: 'Yamaha Aerox - Old',
     category: 'Motor',
-    price: 40000,
+    price: 50000,
     description: 'Info lebih lengkap tentang model ini ada di discord!',
-    stock: 2,
+    stock: 10,
     images: [
       old,
       old2,
@@ -402,7 +402,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     category: 'Motor',
     price: 25000,
     description: 'Info lebih lengkap tentang model ini ada di discord!',
-    stock: 3,
+    stock: 2,
     images: [
       miov1,
       miov2,
@@ -436,7 +436,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     category: 'Motor',
     price: 50000,
     description: 'Info lebih lengkap tentang model ini ada di discord!',
-    stock: 5,
+    stock: 10,
     images: [
       soulmx,
       soulmx2,
@@ -718,7 +718,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     name: 'Kaliper Aurora Nickel + Breket Kiri',
     category: 'Part Motor',
     price: 20000,
-    description: 'Universal',
+    description: 'Universal Matic',
     stock: 10,
     images: [
       kaliperaurora
