@@ -20,14 +20,16 @@ import BannerCarousel from './components/BannerCarousel';
 import ProductCard from './components/ProductCard';
 import ProductDetail from './components/ProductDetail';
 import CartDrawer from './components/CartDrawer';
-import Checkout from './components/Checkout';
 import AdminPanel from './components/AdminPanel';
+
+// DISCORD REDIRECT CONSTANT
+const DISCORD_SERVER_URL = 'https://discord.gg/hyA7X58cwa';
 
 export default function App() {
   // Global States
   const [products, setProducts] = useState<Product[]>([]);
   const [cart, setCart] = useState<CartItem[]>([]);
-  const [currentView, setCurrentView] = useState<'home' | 'checkout' | 'admin'>('home');
+  const [currentView, setCurrentView] = useState<'home' | 'admin'>('home');
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
   // UI Interactive States
@@ -158,9 +160,8 @@ export default function App() {
 
   // Immediate Checkout gateway trigger
   const handleBuyNow = (product: Product, quantity = 1) => {
-    handleAddToCart(product, quantity);
-    setSelectedProduct(null);
-    setCurrentView('checkout');
+    // DISCORD REDIRECT
+    window.open(DISCORD_SERVER_URL, '_blank');
   };
 
   // Multi-Category selection menu keys
@@ -185,22 +186,15 @@ export default function App() {
 
   const totalCartItems = cart.reduce((sum, item) => sum + item.quantity, 0);
 
+  /* NEO BRUTALISM */
   return (
-    <div className="min-h-screen bg-slate-950 font-sans text-slate-100 selection:bg-cyan-500 selection:text-slate-950 relative overflow-x-hidden pb-24 sm:pb-8">
-      {/* Background Liquid Ambient Light Spots (iOS 26 Glow Accent) */}
-      <div className="absolute top-[-10%] left-[5%] w-[450px] h-[450px] bg-indigo-500/10 blur-[140px] rounded-full -z-10 pointer-events-none" />
-      <div className="absolute top-[30%] right-[-10%] w-[500px] h-[500px] bg-cyan-500/5 blur-[150px] rounded-full -z-10 pointer-events-none" />
-      <div className="absolute bottom-[10%] left-[10%] w-[400px] h-[400px] bg-pink-500/5 blur-[120px] rounded-full -z-10 pointer-events-none" />
-
-      {/* HEADER SECTION - Back-glass blur effect */}
-      <header className="sticky top-0 z-40 backdrop-blur-md bg-slate-950/65 border-b border-white/10 px-4 py-3 sm:py-4 transition-all">
-        {/* Top inner shiny light line decoration */}
-        <div className="absolute top-[1px] left-4 right-4 h-[1px] bg-gradient-to-r from-transparent via-white/15 to-transparent pointer-events-none" />
-        
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+    <div className="min-h-screen bg-[#F5F5F5] font-sans text-black relative overflow-x-hidden pb-24 sm:pb-8">
+      {/* HEADER SECTION - Solid White with Stark Black Borders */}
+      <header className="sticky top-0 z-40 bg-white border-b-4 border-black px-4 py-4 sm:py-5 transition-all">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           {/* Brand Logo left side */}
           <div 
-            className="cursor-pointer active:scale-95 transition-transform" 
+            className="cursor-pointer active:translate-x-0.5 active:translate-y-0.5" 
             onClick={() => {
               setCurrentView('home');
               setActiveCategory('Semua');
@@ -214,51 +208,51 @@ export default function App() {
           {currentView === 'home' && (
             <div className="relative w-full max-w-sm md:max-w-md">
               <span className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none">
-                <Search className="w-4 h-4 text-slate-400" />
+                <Search className="w-5 h-5 text-black stroke-[3px]" />
               </span>
               <input
                 type="text"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 placeholder="Cari Mobil, Vespa, Knalpot, Coating..."
-                className="w-full pl-10 pr-9 py-2 rounded-2xl text-xs sm:text-sm bg-white/5 hover:bg-white/10 focus:bg-slate-950 border border-white/10 hover:border-white/15 focus:border-cyan-500 focus:outline-none transition-all placeholder:text-slate-500 text-white"
+                className="w-full pl-11 pr-9 py-3 bg-white border-3 border-black text-xs sm:text-sm text-black placeholder-gray-550 focus:outline-none focus:bg-[#FFE500]/10 font-black rounded-none"
               />
               {searchTerm && (
                 <button
                   onClick={() => setSearchTerm('')}
-                  className="absolute inset-y-0 right-0 pr-3 flex items-center text-slate-400 hover:text-white"
+                  className="absolute inset-y-0 right-0 pr-3 flex items-center text-black hover:text-[#FF6B6B]"
                 >
-                  <X className="w-4.5 h-4.5" />
+                  <X className="w-5 h-5 stroke-[3px]" />
                 </button>
               )}
             </div>
           )}
 
           {/* Header Action Buttons (Right Aligned) */}
-          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+          <div className="flex items-center gap-3 shrink-0">
             {/* Admin trigger Lock icon */}
             <button
               onClick={() => setCurrentView(currentView === 'admin' ? 'home' : 'admin')}
-              className={`w-10 h-10 rounded-2xl flex items-center justify-center transition-all duration-300 border cursor-pointer ${
+              className={`w-11 h-11 border-3 border-black flex items-center justify-center transition-all cursor-pointer shadow-[3px_3px_0px_#000000] active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0px_#000000] rounded-none ${
                 currentView === 'admin'
-                  ? 'bg-cyan-500 text-slate-950 border-cyan-400'
-                  : 'bg-white/5 hover:bg-white/10 border-white/10 text-slate-300 hover:text-white'
+                  ? 'bg-[#FFE500] text-black'
+                  : 'bg-white hover:bg-gray-150 text-black'
               }`}
               title="Admin Dashboard"
             >
-              <User className="w-5 h-5" />
+              <User className="w-5.5 h-5.5 stroke-[2.5px]" />
             </button>
 
             {/* Shopping Cart button trigger */}
             <button
               onClick={() => setIsCartOpen(true)}
-              className="px-4 h-10 rounded-2xl bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-550 hover:to-blue-550 border border-cyan-500/20 flex items-center gap-2 text-white relative cursor-pointer active:scale-95 transition-transform shadow-lg shadow-cyan-900/10"
+              className="px-5 h-11 bg-[#FFE500] hover:bg-[#FFE500]/90 border-3 border-black flex items-center gap-2 text-black relative cursor-pointer shadow-[3px_3px_0px_#000000] active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0px_#000000] transition-all rounded-none"
             >
-              <ShoppingCart className="w-4.5 h-4.5" />
-              <span className="text-xs font-bold font-mono tracking-wide hidden sm:inline">Keranjang</span>
+              <ShoppingCart className="w-5 h-5 stroke-[2.5px]" />
+              <span className="text-xs font-black uppercase tracking-wider hidden sm:inline">Keranjang</span>
               
               {totalCartItems > 0 && (
-                <span className="absolute -top-1.5 -right-1.5 flex h-5 w-5 items-center justify-center rounded-full bg-red-500 text-[10px] font-bold font-mono text-white shadow-xl ring-2 ring-slate-950">
+                <span className="absolute -top-2 -right-2 flex h-6 w-6 items-center justify-center bg-[#FF6B6B] text-[11px] font-black font-mono text-black border-2 border-black shadow-[1.5px_1.5px_0px_#000000]">
                   {totalCartItems}
                 </span>
               )}
@@ -268,37 +262,37 @@ export default function App() {
       </header>
 
       {/* RENDER DYNAMIC SWITCH VIEWS ROUTER */}
-      <main id="lowspeed-main-stage" className="mt-4 sm:mt-6">
+      <main id="lowspeed-main-stage" className="mt-6 sm:mt-8">
         <AnimatePresence mode="wait">
           {currentView === 'home' && (
             <motion.div
               key="catalog"
-              initial={{ opacity: 0, y: 10 }}
+              initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.4 }}
+              exit={{ opacity: 0, y: -15 }}
+              transition={{ duration: 0.2 }}
               className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8"
             >
               {/* Banner sliding component */}
               <BannerCarousel onCategorySelect={(cat) => setActiveCategory(cat as Category)} />
 
               {/* AUTOMOTIVE CATEGORIES BAR SCROLL GRIDS */}
-              <section className="space-y-3">
-                <div className="flex items-center justify-between">
-                  <h3 className="text-xs uppercase tracking-widest text-slate-400 font-mono font-bold flex items-center gap-1.5 col">
-                    <Filter className="w-3.5 h-3.5 text-cyan-400" /> PILIH KATEGORI AUTOMOTIF
+              <section className="space-y-4">
+                <div className="flex items-center justify-between border-b-3 border-black pb-2">
+                  <h3 className="text-xs uppercase tracking-wider text-black font-black flex items-center gap-1.5">
+                    <Filter className="w-4 h-4 text-black stroke-[3px]" /> PILIH KATEGORI AUTOMOTIF
                   </h3>
                   {activeCategory !== 'Semua' && (
                     <button
                       onClick={() => setActiveCategory('Semua')}
-                      className="text-xs text-cyan-405 text-cyan-400 hover:underline cursor-pointer"
+                      className="text-xs uppercase font-black text-black hover:underline cursor-pointer bg-[#00FF85] px-2 py-0.5 border border-black"
                     >
                       Reset Kategori
                     </button>
                   )}
                 </div>
 
-                <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-7 gap-2.5">
+                <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-3">
                   {CATEGORY_ITEMS.map((item) => {
                     const IconComp = item.icon;
                     const isActive = activeCategory === item.name;
@@ -306,19 +300,14 @@ export default function App() {
                       <button
                         key={item.name}
                         onClick={() => setActiveCategory(item.name as Category | 'Semua')}
-                        className={`flex flex-col items-center justify-center p-3 sm:p-4 rounded-3xl border transition-all duration-300 relative group cursor-pointer active:scale-95 ${
+                        className={`flex flex-col items-center justify-center p-4 border-3 border-black transition-all duration-100 relative group cursor-pointer rounded-none shadow-[3px_3px_0px_#000000] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none ${
                           isActive
-                            ? 'backdrop-blur-xl bg-cyan-500 text-slate-950 border-cyan-400 shadow-xl shadow-cyan-500/10'
-                            : 'backdrop-blur-md bg-white/5 hover:bg-white/10 text-slate-350 border-white/10 hover:border-white/15'
+                            ? 'bg-[#FFE500] text-black font-black'
+                            : 'bg-white hover:bg-gray-150 text-black'
                         }`}
                       >
-                        {/* Upper highlight on custom button */}
-                        {!isActive && (
-                          <div className="absolute top-[1.5px] left-2 right-2 h-[1px] bg-gradient-to-r from-transparent via-white/15 to-transparent" />
-                        )}
-                        
-                        <IconComp className={`w-5 h-5 mb-1.5 transition-transform group-hover:scale-110 ${isActive ? 'text-slate-950' : 'text-cyan-400'}`} />
-                        <span className="text-[10px] sm:text-xs font-extrabold font-sans uppercase tracking-wide truncate max-w-full text-center">
+                        <IconComp className="w-6 h-6 mb-2 stroke-[2.5px]" />
+                        <span className="text-[11px] font-black uppercase tracking-tight text-center truncate max-w-full">
                           {item.name}
                         </span>
                       </button>
@@ -328,18 +317,18 @@ export default function App() {
               </section>
 
               {/* PRODUCTS LISTING CATALOG SECTION */}
-              <section className="space-y-4">
-                <div className="flex justify-between items-baseline border-b border-white/10 pb-2">
-                  <h2 className="text-lg font-black tracking-widest text-white uppercase font-sans flex items-center gap-1.5">
+              <section className="space-y-6">
+                <div className="flex justify-between items-baseline border-b-3 border-black pb-2.5">
+                  <h2 className="text-lg font-black tracking-tight text-black uppercase font-sans flex items-center gap-2">
                     {activeCategory === 'Semua' ? 'Katalog Semua Produk' : `Koleksi ${activeCategory}`}
-                    <span className="text-xs font-mono font-medium text-slate-400 px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10">
+                    <span className="text-xs font-mono font-black text-black px-3 py-0.5 rounded-none bg-[#FFE500] border-2 border-black shadow-[2px_2px_0px_#000000]">
                       {filteredProducts.length} unit
                     </span>
                   </h2>
 
                   {searchTerm && (
-                    <span className="text-xs text-slate-400">
-                      Kata kunci: <b className="text-white">"{searchTerm}"</b>
+                    <span className="text-xs font-bold text-black bg-white px-2 py-1 border border-black">
+                      Kata kunci: <b className="underline">"{searchTerm}"</b>
                     </span>
                   )}
                 </div>
@@ -347,12 +336,12 @@ export default function App() {
                 {/* Grid layout */}
                 {filteredProducts.length === 0 ? (
                   /* Empty state rendering */
-                  <div className="p-12 text-center rounded-3xl backdrop-blur-xl bg-white/5 border border-white/10 max-w-xl mx-auto space-y-4 mt-6">
-                    <HelpCircle className="w-12 h-12 text-slate-600 mx-auto animate-pulse" />
-                    <h3 className="text-sm font-extrabold uppercase tracking-widest text-white">
+                  <div className="p-12 text-center bg-white border-3 border-black shadow-[6px_6px_0px_#000000] rounded-none max-w-xl mx-auto space-y-4 mt-6 text-black">
+                    <HelpCircle className="w-12 h-12 text-black mx-auto stroke-[2.5px]" />
+                    <h3 className="text-sm font-black uppercase tracking-wider text-black">
                       Produk Tidak Ditemukan
                     </h3>
-                    <p className="text-xs text-slate-400 leading-relaxed">
+                    <p className="text-xs text-black/75 font-bold leading-normal">
                       Maaf, produk mewah dengan filter atau kata pencarian "{searchTerm}" sedang tidak tersedia di Lowspeed. Coba gunakan kategori lain atau atur ulang pencarian.
                     </p>
                     <button
@@ -360,7 +349,7 @@ export default function App() {
                         setActiveCategory('Semua');
                         setSearchTerm('');
                       }}
-                      className="px-5 py-2 rounded-2xl bg-cyan-500 hover:bg-cyan-400 whitespace-nowrap font-bold text-slate-950 text-xs transition-colors cursor-pointer"
+                      className="px-5 py-3 bg-[#FFE500] border-2 border-black font-black text-black text-xs uppercase shadow-[3px_3px_0px_#000000] active:translate-x-0.5 active:translate-y-0.5 rounded-none cursor-pointer"
                     >
                       Tampilkan Semua Barang
                     </button>
@@ -381,33 +370,13 @@ export default function App() {
             </motion.div>
           )}
 
-          {currentView === 'checkout' && (
-            <motion.div
-              key="checkout"
-              initial={{ opacity: 0, scale: 0.98 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.98 }}
-              transition={{ duration: 0.4 }}
-            >
-              <Checkout
-                cartItems={cart}
-                onBackToCart={() => {
-                  setCurrentView('home');
-                  setIsCartOpen(true);
-                }}
-                onClearCart={handleClearCart}
-                onCreateOrder={handleCreateOrder}
-              />
-            </motion.div>
-          )}
-
           {currentView === 'admin' && (
             <motion.div
               key="admin"
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -15 }}
-              transition={{ duration: 0.4 }}
+              transition={{ duration: 0.2 }}
             >
               <AdminPanel
                 products={products}
@@ -425,12 +394,9 @@ export default function App() {
         </AnimatePresence>
       </main>
 
-      {/* PRIMARY FLOATING GLASS BOTTOM NAVIGATION PILL (iOS 26 Liquid Signature for mobile devices) */}
+      {/* PRIMARY FLOATING BOTTOM NAVIGATION BAR FOR MOBILE DEVICES */}
       <div className="fixed bottom-6 left-1/2 -translate-x-1/2 w-80 max-w-full px-1.5 py-1.5 z-40 sm:hidden">
-        <div className="relative rounded-full backdrop-blur-2xl bg-slate-950/70 border border-white/20 p-1 shadow-2xl flex justify-between items-center text-slate-350">
-          {/* Subtle upper glass curve accent */}
-          <div className="absolute top-[1px] left-6 right-6 h-[1.5px] bg-gradient-to-r from-transparent via-white/30 to-transparent pointer-events-none" />
-
+        <div className="relative bg-white border-3 border-black p-1 shadow-[4px_4px_0px_#000000] flex justify-between items-center text-black rounded-none">
           {/* Home Catalog Link */}
           <button
             onClick={() => {
@@ -438,39 +404,39 @@ export default function App() {
               setActiveCategory('Semua');
               setSearchTerm('');
             }}
-            className={`flex-1 py-2 rounded-full flex flex-col items-center justify-center transition-all ${
-              currentView === 'home' ? 'text-cyan-400 font-extrabold' : 'text-slate-400 hover:text-white'
+            className={`flex-1 py-2 flex flex-col items-center justify-center transition-all ${
+              currentView === 'home' ? 'bg-[#FFE500] font-black text-black border border-black' : 'text-black hover:bg-gray-100'
             }`}
           >
-            <ShoppingBag className="w-5 h-5 mb-0.5" />
-            <span className="text-[9px] uppercase tracking-wider font-extrabold">Katalog</span>
+            <ShoppingBag className="w-5 h-5 mb-0.5 stroke-[2.5px]" />
+            <span className="text-[9px] uppercase tracking-wide font-black">Katalog</span>
           </button>
 
           {/* Open shopping cart tab */}
           <button
             onClick={() => setIsCartOpen(true)}
-            className="flex-1 py-1 relative flex flex-col items-center justify-center text-slate-400 hover:text-white"
+            className="flex-1 py-1 relative flex flex-col items-center justify-center text-black hover:bg-gray-100"
           >
             <div className="relative">
-              <ShoppingCart className="w-5 h-5 mb-0.5 text-cyan-400" />
+              <ShoppingCart className="w-5 h-5 mb-0.5 stroke-[2.5px]" />
               {totalCartItems > 0 && (
-                <span className="absolute -top-1.5 -right-2 flex h-4 w-4 items-center justify-center rounded-full bg-red-500 text-[9px] font-bold font-mono text-white ring-1 ring-slate-950">
+                <span className="absolute -top-1.5 -right-2 flex h-4 w-4 items-center justify-center bg-[#FF6B6B] text-[9px] font-black text-black border border-black">
                   {totalCartItems}
                 </span>
               )}
             </div>
-            <span className="text-[9px] uppercase tracking-wider font-extrabold">Cart</span>
+            <span className="text-[9px] uppercase tracking-wide font-black">Cart</span>
           </button>
 
           {/* Admin panel redirect */}
           <button
             onClick={() => setCurrentView(currentView === 'admin' ? 'home' : 'admin')}
-            className={`flex-1 py-2 rounded-full flex flex-col items-center justify-center transition-all ${
-              currentView === 'admin' ? 'text-cyan-400 font-extrabold' : 'text-slate-400 hover:text-white'
+            className={`flex-1 py-2 flex flex-col items-center justify-center transition-all ${
+              currentView === 'admin' ? 'bg-[#FFE500] font-black text-black border border-black' : 'text-black hover:bg-gray-100'
             }`}
           >
-            <User className="w-5 h-5 mb-0.5" />
-            <span className="text-[9px] uppercase tracking-wider font-extrabold">Admin</span>
+            <User className="w-5 h-5 mb-0.5 stroke-[2.5px]" />
+            <span className="text-[9px] uppercase tracking-wide font-black">Admin</span>
           </button>
         </div>
       </div>
@@ -497,8 +463,8 @@ export default function App() {
             onUpdateQty={handleUpdateCartQty}
             onRemoveItem={handleRemoveCartItem}
             onProceedToCheckout={() => {
-              setIsCartOpen(false);
-              setCurrentView('checkout');
+              // Directly redirects to Discord URL
+              window.open(DISCORD_SERVER_URL, '_blank');
             }}
           />
         )}

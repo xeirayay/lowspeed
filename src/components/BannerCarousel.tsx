@@ -13,7 +13,9 @@ interface Banner {
   subtitle: string;
   badge: string;
   image: string;
-  accent: string;
+  accentBg: string; // solid color for neo brutalism
+  textColor: string;
+  badgeColor: string;
   targetCategory?: string;
 }
 
@@ -24,7 +26,9 @@ const BANNERS: Banner[] = [
     subtitle: 'Menyediakan Model Yang Berkualitas Dengan Budget Pelajar',
     badge: 'Best Seller',
     image: '',
-    accent: 'from-blue-500/20 to-cyan-500/10',
+    accentBg: 'bg-[#FFE500]', // Yellow
+    textColor: 'text-black',
+    badgeColor: 'bg-[#00FF85]',
     targetCategory: 'Motor'
   },
   {
@@ -33,7 +37,9 @@ const BANNERS: Banner[] = [
     subtitle: 'Menyediakan Part Motor Berkualitas Dengan Harga Terjangkau',
     badge: 'Bahan Gantengmu',
     image: '',
-    accent: 'from-amber-500/20 to-red-500/10',
+    accentBg: 'bg-[#00FF85]', // Green
+    textColor: 'text-black',
+    badgeColor: 'bg-[#FFE500]',
     targetCategory: 'Part Motor'
   },
   {
@@ -42,7 +48,9 @@ const BANNERS: Banner[] = [
     subtitle: 'Menyediakan Jasa Dengan Harga Terjangkau, Dan Model Aman Dari Leak',
     badge: 'Jasa Terpercaya',
     image: '',
-    accent: 'from-purple-500/20 to-pink-500/10',
+    accentBg: 'bg-[#4D4DFF]', // Blue
+    textColor: 'text-white',
+    badgeColor: 'bg-[#FF6B6B] text-black',
     targetCategory: 'Jasa'
   },
   {
@@ -51,7 +59,9 @@ const BANNERS: Banner[] = [
     subtitle: 'Coming SoOooOn :>',
     badge: 'Coming SoOoooOn :>',
     image: '',
-    accent: 'from-purple-500/20 to-pink-500/10',
+    accentBg: 'bg-[#FF6B6B]', // Red
+    textColor: 'text-black',
+    badgeColor: 'bg-[#FFE500]',
     targetCategory: 'Mobil'
   },
   {
@@ -60,7 +70,9 @@ const BANNERS: Banner[] = [
     subtitle: 'Coming SoOooOn :>',
     badge: 'Coming SoOoooOn :>',
     image: '',
-    accent: 'from-purple-500/20 to-pink-500/10',
+    accentBg: 'bg-[#ffffff]', // White
+    textColor: 'text-black',
+    badgeColor: 'bg-[#4D4DFF] text-white',
     targetCategory: 'Part Mobil'
   }
 ];
@@ -85,69 +97,49 @@ export default function BannerCarousel({ onCategorySelect }: BannerCarouselProps
     return () => clearInterval(interval);
   }, [nextSlide]);
 
+  /* NEO BRUTALISM */
   return (
-    <div id="banner-carousel-root" className="relative w-full h-[240px] sm:h-[350px] md:h-[420px] rounded-3xl overflow-hidden shadow-2xl border border-white/10 group bg-slate-950">
-      
-      {/* Specular Inner Highlight Effect (Liquid Glass Signature) */}
-      <div className="absolute top-[1px] left-3 right-3 h-[2px] bg-gradient-to-r from-transparent via-white/20 to-transparent z-10 pointer-events-none" />
-      
+    <div id="banner-carousel-root" className="relative w-full h-[260px] sm:h-[350px] md:h-[400px] rounded-none overflow-hidden border-4 border-black shadow-[8px_8px_0px_#000000] bg-white group">
       {/* Slider Content */}
       <AnimatePresence mode="wait">
         <motion.div
           key={currentIndex}
-          initial={{ opacity: 0, scale: 1.02 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.98 }}
-          transition={{ duration: 0.6, ease: 'easeOut' }}
-          className="absolute inset-0 w-full h-full"
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -20 }}
+          transition={{ duration: 0.2 }}
+          className={`absolute inset-0 w-full h-full flex flex-col justify-between p-6 sm:p-10 md:p-12 ${BANNERS[currentIndex].accentBg} ${BANNERS[currentIndex].textColor}`}
         >
-          {/* Background Image with Ambient Shadow Overlays */}
-          <div className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-all duration-[6000ms] group-hover:scale-105" style={{ backgroundImage: `url(${BANNERS[currentIndex].image})` }} />
-          
-          {/* Liquid Glass Overlay Backdrop Filter */}
-          <div className={`absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/60 to-transparent`} />
-          <div className={`absolute inset-0 bg-gradient-to-r ${BANNERS[currentIndex].accent} mix-blend-multiply opacity-60`} />
-
-          {/* Real Text Content */}
-          <div className="absolute inset-0 flex flex-col justify-end p-6 sm:p-12 md:p-16 z-10">
-            <motion.span
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.1, duration: 0.4 }}
-              className="inline-flex items-center gap-1.5 px-3 py-1 text-[10px] md:text-xs font-bold tracking-widest text-cyan-400 bg-cyan-950/40 border border-cyan-500/30 rounded-full w-fit mb-3 backdrop-blur-md"
-            >
-              <Sparkles className="w-3.5 h-3.5" />
+          {/* Top Row with Badge */}
+          <div className="flex items-center justify-between">
+            <span className={`inline-flex items-center gap-1.5 px-3 py-1 text-xs font-black tracking-widest uppercase border-2 border-black shadow-[2px_2px_0px_#000000] ${BANNERS[currentIndex].badgeColor} text-black`}>
+              <Sparkles className="w-3.5 h-3.5 fill-current" />
               {BANNERS[currentIndex].badge}
-            </motion.span>
-            
-            <motion.h2
-              initial={{ y: 25, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.2, duration: 0.4 }}
-              className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-white font-sans uppercase tracking-tight leading-tight max-w-2xl text-shadow-md"
-            >
+            </span>
+            <span className="font-mono font-black text-sm">
+              [ {currentIndex + 1} / {BANNERS.length} ]
+            </span>
+          </div>
+
+          {/* Middle Body Header/Subtitle */}
+          <div className="space-y-3 sm:space-y-4">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight leading-none text-shadow-none">
               {BANNERS[currentIndex].title}
-            </motion.h2>
-            
-            <motion.p
-              initial={{ y: 30, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.3, duration: 0.4 }}
-              className="text-xs sm:text-base text-slate-350 max-w-lg mt-2 sm:mt-3 leading-relaxed hidden sm:block"
-            >
+            </h2>
+            <p className="text-sm sm:text-lg font-bold leading-relaxed max-w-2xl border-l-4 border-black pl-3 py-1">
               {BANNERS[currentIndex].subtitle}
-            </motion.p>
-            
+            </p>
+          </div>
+
+          {/* Bottom Action CTA Button */}
+          <div>
             {BANNERS[currentIndex].targetCategory && (
-              <motion.button
-                initial={{ y: 35, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.4, duration: 0.4 }}
+              <button
                 onClick={() => onCategorySelect(BANNERS[currentIndex].targetCategory!)}
-                className="mt-4 sm:mt-6 w-fit px-5 py-2.5 bg-white/10 hover:bg-white/20 active:scale-95 text-white text-xs sm:text-sm font-bold tracking-wide rounded-2xl border border-white/20 backdrop-blur-md transition-all duration-300 shadow-lg"
+                className="px-6 py-3 bg-[#000000] hover:bg-white text-white hover:text-black font-black uppercase tracking-widest border-3 border-black shadow-[4px_4px_0px_#FFE500] hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-none transition-all duration-100 cursor-pointer text-xs sm:text-sm rounded-none"
               >
-                Jelajahi Sekarang
-              </motion.button>
+                Jelajahi Sekarang ➜
+              </button>
             )}
           </div>
         </motion.div>
@@ -157,26 +149,26 @@ export default function BannerCarousel({ onCategorySelect }: BannerCarouselProps
       <button
         id="btn-prev-banner"
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-slate-900/30 hover:bg-slate-900/60 active:scale-90 border border-white/10 hover:border-white/20 flex items-center justify-center text-white backdrop-blur-md transition-all z-20 opacity-0 group-hover:opacity-100 cursor-pointer"
+        className="absolute left-4 bottom-4 w-10 h-10 bg-white hover:bg-[#FFE500] border-3 border-black text-black flex items-center justify-center transition-all shadow-[2px_2px_0px_#000000] active:translate-x-0.5 active:translate-y-0.5 cursor-pointer z-20"
       >
-        <ChevronLeft className="w-5 h-5" />
+        <ChevronLeft className="w-5 h-5 stroke-[3px]" />
       </button>
       <button
         id="btn-next-banner"
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-slate-900/30 hover:bg-slate-900/60 active:scale-90 border border-white/10 hover:border-white/20 flex items-center justify-center text-white backdrop-blur-md transition-all z-20 opacity-0 group-hover:opacity-100 cursor-pointer"
+        className="absolute left-16 bottom-4 w-10 h-10 bg-white hover:bg-[#FFE500] border-3 border-black text-black flex items-center justify-center transition-all shadow-[2px_2px_0px_#000000] active:translate-x-0.5 active:translate-y-0.5 cursor-pointer z-20"
       >
-        <ChevronRight className="w-5 h-5" />
+        <ChevronRight className="w-5 h-5 stroke-[3px]" />
       </button>
 
       {/* Pagination Dot Indicator */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2 z-20">
+      <div className="absolute right-6 bottom-6 flex items-center gap-1.5 z-20">
         {BANNERS.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentIndex(index)}
-            className={`h-2 rounded-full cursor-pointer transition-all duration-300 ${
-              index === currentIndex ? 'w-6 bg-white' : 'w-2 bg-white/40 hover:bg-white/65'
+            className={`h-3 border-2 border-black cursor-pointer transition-all ${
+              index === currentIndex ? 'w-8 bg-black' : 'w-3 bg-white hover:bg-black/20'
             }`}
           />
         ))}

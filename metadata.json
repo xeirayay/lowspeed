@@ -1,6 +1,6 @@
 {
   "name": "Lowspeed",
-  "description": "Platform e-commerce premium bertema Liquid Glass (iOS 26) untuk otomotif supercars, superbike, suku cadang, dan pelayanan jasa.",
+  "description": "Platform e-commerce bertema Neo Brutalism untuk otomotif sport, superbike, suku cadang, dan pelayanan jasa dengan flow pemesanan langsung via Discord.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

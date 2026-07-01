@@ -4,6 +4,200 @@
  */
 
 import { Product } from './types';
+import ld1 from './assets/ledold/1.png';
+import ld2 from './assets/ledold/2.png';
+
+import gen11 from './assets/gen1/1.png';
+import gen12 from './assets/gen1/2.png';
+import gen13 from './assets/gen1/3.png';
+import gen14 from './assets/gen1/4.png';
+import gen15 from './assets/gen1/5.png';
+import gen16 from './assets/gen1/6.png';
+
+import gen21 from './assets/gen2/1.png';
+import gen22 from './assets/gen2/2.png';
+import gen23 from './assets/gen2/3.png';
+import gen24 from './assets/gen2/4.png';
+import gen25 from './assets/gen2/5.png';
+import gen26 from './assets/gen2/6.png';
+
+import kzr1 from './assets/kzr/1.png';
+import kzr2 from './assets/kzr/2.png';
+import kzr3 from './assets/kzr/3.png';
+import kzr4 from './assets/kzr/4.png';
+import kzr5 from './assets/kzr/5.png';
+import kzr6 from './assets/kzr/6.png';
+
+import an1 from './assets/aeroxnewv1/a1.png';
+import an2 from './assets/aeroxnewv1/a2.png';
+import an3 from './assets/aeroxnewv1/a3.png';
+import an4 from './assets/aeroxnewv1/a4.png';
+
+import an21 from './assets/aeroxnewv2/1.png';
+import an22 from './assets/aeroxnewv2/2.png';
+import an23 from './assets/aeroxnewv2/3.png';
+import an24 from './assets/aeroxnewv2/4.png';
+import an25 from './assets/aeroxnewv2/5.png';
+import an26 from './assets/aeroxnewv2/6.png';
+
+import old from './assets/aeroxold/1.png';
+import old2 from './assets/aeroxold/2.png';
+import old3 from './assets/aeroxold/3.png';
+import old4 from './assets/aeroxold/4.png';
+import old5 from './assets/aeroxold/5.png';
+import old6 from './assets/aeroxold/6.png';
+import old7 from './assets/aeroxold/7.png';
+import old8 from './assets/aeroxold/8.png';
+import old9 from './assets/aeroxold/9.png';
+
+import beat from './assets/beat/1.png';
+import beat2 from './assets/beat/2.png';
+import beat3 from './assets/beat/3.png';
+import beat4 from './assets/beat/4.png';
+
+import cbr from './assets/cbr/1.png';
+import cbr2 from './assets/cbr/2.png';
+import cbr3 from './assets/cbr/3.png';
+import cbr4 from './assets/cbr/4.png';
+import cbr5 from './assets/cbr/5.png';
+import cbr6 from './assets/cbr/6.png';
+
+import gl from './assets/glbebas/1.png';
+import gl2 from './assets/glbebas/2.png';
+import gl3 from './assets/glbebas/3.png';
+import gl4 from './assets/glbebas/4.png';
+import gl5 from './assets/glbebas/5.png';
+
+import soulmx from './assets/miosoulmx/1.png';
+import soulmx2 from './assets/miosoulmx/2.png';
+import soulmx3 from './assets/miosoulmx/3.png';
+import soulmx4 from './assets/miosoulmx/4.png';
+import soulmx5 from './assets/miosoulmx/5.png';
+
+import miov1 from './assets/miov1/m1.png';
+import miov2 from './assets/miov1/m2.png';
+import miov3 from './assets/miov1/m3.png';
+import miov4 from './assets/miov1/m4.png';
+import miov5 from './assets/miov1/m5.png';
+import miov6 from './assets/miov1/m6.png';
+
+import miov21 from './assets/miov2/v1.png';
+import miov22 from './assets/miov2/v2.png';
+import miov23 from './assets/miov2/v3.png';
+import miov24 from './assets/miov2/v4.png';
+import miov25 from './assets/miov2/v5.png';
+import miov26 from './assets/miov2/v6.png';
+import miov27 from './assets/miov2/v7.png';
+import miov28 from './assets/miov2/v8.png';
+
+import pcx from './assets/pcx/p1.png';
+import pcx2 from './assets/pcx/p2.png';
+import pcx3 from './assets/pcx/p3.png';
+import pcx4 from './assets/pcx/p4.png';
+import pcx5 from './assets/pcx/p5.png';
+import pcx6 from './assets/pcx/p6.png';
+
+import r15 from './assets/r15/r1.png';
+import r152 from './assets/r15/r2.png';
+import r153 from './assets/r15/r3.png';
+import r154 from './assets/r15/r4.png';
+
+import scoopy from './assets/scoopy/c1.png';
+import scoopy2 from './assets/scoopy/c2.png';
+import scoopy3 from './assets/scoopy/c3.png';
+import scoopy4 from './assets/scoopy/c4.png';
+
+import stylo from './assets/stylo/s1.png';
+import stylo2 from './assets/stylo/s2.png';
+import stylo3 from './assets/stylo/s3.png';
+import stylo4 from './assets/stylo/s4.png';
+
+import xmax from './assets/xmax/1.png';
+import xmax2 from './assets/xmax/2.png';
+import xmax3 from './assets/xmax/3.png';
+import xmax4 from './assets/xmax/4.png';
+import xmax5 from './assets/xmax/5.png';
+import xmax6 from './assets/xmax/6.png';
+
+import akront from './assets/part/akront/1.jpg';
+
+import armnusan from './assets/part/armnusan/1.jpg';
+
+import beheltitan from './assets/part/beheltitan/1.png';
+
+import bordershi from './assets/part/bordershi/1.jpeg';
+
+import bremborcs from './assets/part/bremborcs/2.jpg';
+import bremborcs2 from './assets/part/bremborcs/3.jpg';
+
+import drsviola from './assets/part/drsviola/1.png';
+import drsviola2 from './assets/part/drsviola/2.png';
+import drsviola3 from './assets/part/drsviola/3.png';
+import drsviola4 from './assets/part/drsviola/4.png';
+
+import dslkenochi from './assets/part/dslkenochi/1.png';
+import dslkenochi2 from './assets/part/dslkenochi/2.png';
+import dslkenochi3 from './assets/part/dslkenochi/3.png';
+
+import enginevario from './assets/part/enginevario/1.png';
+import enginevario2 from './assets/part/enginevario/2.png';
+import enginevario3 from './assets/part/enginevario/3.png';
+import enginevario4 from './assets/part/enginevario/4.png';
+
+import ermthai from './assets/part/ermthai/1.png';
+import ermthai2 from './assets/part/ermthai/2.png';
+import ermthai3 from './assets/part/ermthai/3.png';
+import ermthai4 from './assets/part/ermthai/4.png';
+
+import formulasemi from './assets/part/formulasemi/1.png';
+import formulasemi2 from './assets/part/formulasemi/2.png';
+
+import formulasunblast from './assets/part/formulasunblast/1.png';
+import formulasunblast2 from './assets/part/formulasunblast/2.png';
+
+import framecnc from './assets/part/framecnc/1.jpg';
+
+import handgrip from './assets/part/handgrip/1.png';
+
+import hypervision from './assets/part/hypervision/1.png';
+import hypervision2 from './assets/part/hypervision/2.png';
+import hypervision3 from './assets/part/hypervision/3.png';
+
+import jaribubut from './assets/part/jaribubut/1.png';
+import jaribubut2 from './assets/part/jaribubut/2.png';
+
+import jokpanda from './assets/part/jokpanda/1.jpg';
+import jokpanda2 from './assets/part/jokpanda/2.jpg';
+import jokpanda3 from './assets/part/jokpanda/3.jpg';
+
+import kaliperaurora from './assets/part/kaliperaurora/1.jpg';
+
+import kingu from './assets/part/kingu/1.jpg';
+import kingu2 from './assets/part/kingu/2.jpg';
+import kingu3 from './assets/part/kingu/3.jpg';
+
+import nathongaerox from './assets/part/nathongaerox/1.jpg';
+import nathongaerox2 from './assets/part/nathongaerox/2.jpg';
+
+import nathongvario from './assets/part/nathongvario/1.png';
+
+import ox2 from './assets/part/ox2/1.png';
+import ox22 from './assets/part/ox2/2.png';
+
+import rsevens from './assets/part/rsevens/1.png';
+import rsevens2 from './assets/part/rsevens/2.png';
+import rsevens3 from './assets/part/rsevens/3.png';
+import rsevens4 from './assets/part/rsevens/4.png';
+
+import saklarv from './assets/part/saklarv/1.jpg';
+
+import shafer from './assets/part/shafer/1.png';
+
+import sixstar from './assets/part/sixstar/1.png';
+import sixstar2 from './assets/part/sixstar/2.png';
+import sixstar3 from './assets/part/sixstar/3.png';
+
+import armtzm from './assets/part/armtzm/1.png';
 
 export const INITIAL_PRODUCTS: Product[] = [
   {
@@ -11,13 +205,11 @@ export const INITIAL_PRODUCTS: Product[] = [
     name: 'Honda Vario - Led Old',
     category: 'Motor',
     price: 25000,
-    description: 'Deskripsi Model Ada Di Slide Foto Terakhir',
+    description: 'Info lebih lengkap tentang model ini ada di discord!',
     stock: 10,
     images: [
-      'https://cdn.phototourl.com/member/2026-06-20-ef90ed37-aebd-4739-9999-0c2474296a63.png',
-      'https://cdn.phototourl.com/member/2026-06-20-bbc02b65-59ce-49bc-8997-f61dfcd28687.png',
-      'https://cdn.phototourl.com/member/2026-06-21-522c27d3-0e63-4454-9c84-e1813abcc8a1.png',
-      'https://cdn.phototourl.com/member/2026-06-21-2baf6834-0efa-4f8f-870e-a3d5916978b7.jpg'
+      ld1,
+      ld2
     ],
     createdAt: Date.now() - 1
   },
@@ -26,15 +218,15 @@ export const INITIAL_PRODUCTS: Product[] = [
     name: 'Honda Vario - Gen 1',
     category: 'Motor',
     price: 50000,
-    description: 'Deskripsi Model Ada Di Slide Foto Terakhir',
+    description: 'Info lebih lengkap tentang model ini ada di discord!',
     stock: 5,
     images: [
-      'https://cdn.phototourl.com/member/2026-06-21-8c1c7008-deaf-4ea9-815a-06c007f50247.png',
-      'https://cdn.phototourl.com/member/2026-06-21-b9df2391-1ea0-44e9-9347-e0d73fe91ebc.png',
-      'https://cdn.phototourl.com/member/2026-06-21-6dc912a2-ca70-4055-af5a-1caab1f677cb.png',
-      'https://cdn.phototourl.com/member/2026-06-21-31004063-d2d6-4546-aa36-f13406a5dd83.png',
-      'https://cdn.phototourl.com/member/2026-06-21-2551d7c0-b68e-4b78-ab82-cb3e8dd7e3ab.png',
-      'https://cdn.phototourl.com/member/2026-06-21-97d3328d-fbbe-476d-9c29-d987efc2a054.jpg'
+      gen11,
+      gen12,
+      gen13,
+      gen14,
+      gen15,
+      gen16
     ],
     createdAt: Date.now() - 2
   },
@@ -43,16 +235,15 @@ export const INITIAL_PRODUCTS: Product[] = [
     name: 'Honda Vario - Gen 2',
     category: 'Motor',
     price: 25000,
-    description: 'Deskripsi Model Ada Di Slide Foto Terakhir',
+    description: 'Info lebih lengkap tentang model ini ada di discord!',
     stock: 10,
     images: [
-      'https://cdn.phototourl.com/member/2026-06-21-32c71161-9b8f-4a1e-b620-f7897ee69767.png',
-      'https://cdn.phototourl.com/member/2026-06-21-4336edb8-b704-4fed-b38a-ceecbb60f94c.png',
-      'https://cdn.phototourl.com/member/2026-06-21-6e52ecaf-8efe-48b9-a842-3925ca3095c4.png',
-      'https://cdn.phototourl.com/member/2026-06-21-3cc5539e-10b2-4022-8dd2-f5b3d9e88d2c.png',
-      'https://cdn.phototourl.com/member/2026-06-21-a1a0707d-5b42-4b38-9bab-bc1fdcad527b.png',
-      'https://cdn.phototourl.com/member/2026-06-21-56dcf92a-a6a1-47d7-8337-0d30245d5d81.png',
-      'https://cdn.phototourl.com/member/2026-06-21-a922af4a-4a74-4737-baac-8ae0ce22e921.jpg'
+      gen21,
+      gen22,
+      gen23,
+      gen24,
+      gen25,
+      gen26
     ],
     createdAt: Date.now() - 25000
   },
@@ -61,16 +252,15 @@ export const INITIAL_PRODUCTS: Product[] = [
     name: 'Honda Vario - Kzr',
     category: 'Motor',
     price: 60000,
-    description: 'Deskripsi Model Ada Di Slide Foto Terakhir',
+    description: 'Info lebih lengkap tentang model ini ada di discord!',
     stock: 2,
     images: [
-      'https://cdn.phototourl.com/member/2026-06-20-b6a07092-a7f8-4d63-833a-47c4633ea2ad.png',
-      'https://cdn.phototourl.com/member/2026-06-20-246a2d70-f92f-4c4d-9857-ec937c4f0711.png',
-      'https://cdn.phototourl.com/member/2026-06-20-248647b3-3452-45e9-8fc9-a60d15356c8c.png',
-      'https://cdn.phototourl.com/member/2026-06-20-6d38651b-5fbb-4060-8e18-eb5258b62e7f.png',
-      'https://cdn.phototourl.com/member/2026-06-20-0ac99173-a3e1-410e-8feb-ebaf0d04c1cb.png',
-      'https://cdn.phototourl.com/member/2026-06-20-05aae7df-9765-4b9f-af91-b2878cd3f545.png',
-      'https://cdn.phototourl.com/member/2026-06-20-ec76b7ec-a51a-4265-bb0e-e03983d52d30.png'
+      kzr1,
+      kzr2,
+      kzr3,
+      kzr4,
+      kzr5,
+      kzr6
     ],
     createdAt: Date.now() - 60000
   },
@@ -79,14 +269,13 @@ export const INITIAL_PRODUCTS: Product[] = [
     name: 'Honda Beat',
     category: 'Motor',
     price: 20000,
-    description: 'Deskripsi Model Ada Di Slide Foto Terakhir',
+    description: 'Info lebih lengkap tentang model ini ada di discord!',
     stock: 3,
     images: [
-      'https://cdn.phototourl.com/member/2026-06-20-1318cfdd-7daa-4a27-bf12-3d83b0b0a1db.png',
-      'https://cdn.phototourl.com/member/2026-06-21-9abd20bd-d1f8-4df9-bed4-dbe3a292bb3b.png',
-      'https://cdn.phototourl.com/member/2026-06-20-c204c673-100e-43ae-84ab-19f4812aeab5.png',
-      'https://cdn.phototourl.com/member/2026-06-21-f7e3a2dc-3063-4ef5-bc76-a4d5ed742211.png',
-      'https://cdn.phototourl.com/member/2026-06-21-370e83cc-20aa-4d5d-bbbb-ac44457ca26e.jpg'
+    beat2,
+    beat,
+    beat3,
+    beat4
     ],
     createdAt: Date.now() - 20000
   },
@@ -95,14 +284,13 @@ export const INITIAL_PRODUCTS: Product[] = [
     name: 'Honda Stylo',
     category: 'Motor',
     price: 20000,
-    description: 'Deskripsi Model Ada Di Slide Foto Terakhir',
+    description: 'Info lebih lengkap tentang model ini ada di discord!',
     stock: 10,
     images: [
-      'https://cdn.phototourl.com/member/2026-06-20-89295df1-330e-45b3-a692-d8e504e3ff88.png',
-      'https://cdn.phototourl.com/member/2026-06-20-34013617-3a93-4b07-931e-bbb12e577910.png',
-      'https://cdn.phototourl.com/member/2026-06-20-4948e39e-87fb-46f1-9ba6-a97cebba0a8e.png',
-      'https://cdn.phototourl.com/member/2026-06-20-1d916815-5ff7-4ee9-8ee2-0cefd6c65078.png',
-      'https://cdn.phototourl.com/member/2026-06-21-2a37d9d5-a8fd-4b51-8170-ad58abd16e4c.jpg'
+      stylo,
+      stylo2,
+      stylo3,
+      stylo4
     ],
     createdAt: Date.now() - 20000
   },
@@ -111,14 +299,15 @@ export const INITIAL_PRODUCTS: Product[] = [
     name: 'Honda CBR - 250RR',
     category: 'Motor',
     price: 25000,
-    description: 'Deskripsi Model Ada Di Slide Foto Terakhir',
+    description: 'Info lebih lengkap tentang model ini ada di discord!',
     stock: 10,
     images: [
-      'https://cdn.phototourl.com/member/2026-06-20-86012d8d-6a42-4e50-9287-092114b8a1ab.png',
-      'https://cdn.phototourl.com/member/2026-06-20-59024e3b-84c0-4692-9d11-c5e5b1f30782.png',
-      'https://cdn.phototourl.com/member/2026-06-20-b15ffc38-f80c-4614-8af4-17cc216cabef.png',
-      'https://cdn.phototourl.com/member/2026-06-20-72deb1ef-9e0b-4203-bc85-5b2fbc7a1699.png',
-      'https://cdn.phototourl.com/member/2026-06-21-d450b9a0-40a6-47c7-b9bc-4e5697e6cf91.jpg'
+      cbr,
+      cbr2,
+      cbr3,
+      cbr4,
+      cbr5,
+      cbr6
     ],
     createdAt: Date.now() - 25000
   },
@@ -127,14 +316,13 @@ export const INITIAL_PRODUCTS: Product[] = [
     name: 'Honda Scoopy',
     category: 'Motor',
     price: 10000,
-    description: 'Deskripsi Model Ada Di Slide Foto Terakhir',
+    description: 'Info lebih lengkap tentang model ini ada di discord!',
     stock: 10,
     images: [
-      'https://cdn.phototourl.com/member/2026-06-20-7afca51c-11e7-4a89-b6f4-7e38a09df295.png',
-      'https://cdn.phototourl.com/member/2026-06-20-34bc76d4-30fd-448d-9516-67e64e6f1cf7.png',
-      'https://cdn.phototourl.com/member/2026-06-20-2b1d5314-ecb0-413e-a1e4-ee7c5ba5f70f.png',
-      'https://cdn.phototourl.com/member/2026-06-20-3f5acd64-da9c-4e54-ad47-6ca524d561f6.png',
-      'https://cdn.phototourl.com/member/2026-06-21-08c1d57e-dd06-47fa-8c05-94d21b9da3b1.jpg'
+      scoopy,
+      scoopy2,
+      scoopy3,
+      scoopy4
     ],
     createdAt: Date.now() - 10000
   },
@@ -143,16 +331,16 @@ export const INITIAL_PRODUCTS: Product[] = [
     name: 'Honda Pcx - 150',
     category: 'Motor',
     price: 25000,
-    description: 'Deskripsi Model Ada Di Slide Foto Terakhir',
+    description: 'Info lebih lengkap tentang model ini ada di discord!',
     stock: 5,
     images: [
-      'https://cdn.phototourl.com/member/2026-06-20-623d345f-5472-4f58-94de-87bcd6f78c5e.png',
-      'https://cdn.phototourl.com/member/2026-06-20-04f8b50c-4eec-4e3b-a583-5e106cd4be85.png',
-      'https://cdn.phototourl.com/member/2026-06-20-b3169384-c20d-458b-9634-ddb55649d0dc.png',
-      'https://cdn.phototourl.com/member/2026-06-20-561169df-f511-4173-8693-b6e16b7d3e7c.png',
-      'https://cdn.phototourl.com/member/2026-06-20-562cc735-a732-4cda-8f45-001a4b61ed1f.png',
-      'https://cdn.phototourl.com/member/2026-06-20-c37747c6-a559-4e03-b3f6-b90f895effd8.png',
-      'https://cdn.phototourl.com/member/2026-06-21-0f1267c9-17d8-42be-9f74-b7925f00e3cb.jpg'
+      pcx,
+      pcx2,
+      pcx3,
+      pcx4,
+      pcx5,
+      pcx6,
+      
     ],
     createdAt: Date.now() - 25000
   },
@@ -161,14 +349,13 @@ export const INITIAL_PRODUCTS: Product[] = [
     name: 'Yamaha Aerox New - V1',
     category: 'Motor',
     price: 25000,
-    description: 'Deskripsi Model Ada Di Slide Foto Terakhir',
+    description: 'Info lebih lengkap tentang model ini ada di discord!',
     stock: 10,
     images: [
-      'https://cdn.phototourl.com/member/2026-06-20-b2aeba23-581f-485c-bb17-19b7b4fa1956.png',
-      'https://cdn.phototourl.com/member/2026-06-21-396504b6-1e3c-42a3-9f53-54a9fffbb524.png',
-      'https://cdn.phototourl.com/member/2026-06-21-a827a54d-5484-468e-8ac4-c61526a77a03.png',
-      'https://cdn.phototourl.com/member/2026-06-20-4c403252-6c64-4f15-840a-561f90d85f5f.png',
-      'https://cdn.phototourl.com/member/2026-06-21-1c1c09bb-8721-47e1-8fba-27677c3b35c4.jpg'
+      an1,
+      an2,
+      an3,
+      an4
     ],
     createdAt: Date.now() - 100000000
   },
@@ -177,18 +364,15 @@ export const INITIAL_PRODUCTS: Product[] = [
     name: 'Yamaha Aerox New - V2',
     category: 'Motor',
     price: 30000,
-    description: 'Deskripsi Model Ada Di Slide Foto Terakhir',
+    description: 'Info lebih lengkap tentang model ini ada di discord!',
     stock: 10,
     images: [
-      'https://cdn.phototourl.com/member/2026-06-20-2624c22f-7bea-4530-9f9e-43138884fcf4.png',
-      'https://cdn.phototourl.com/member/2026-06-20-8723475e-b4e4-4f87-8444-8a51a553fb12.png',
-      'https://cdn.phototourl.com/member/2026-06-20-a960adf8-ca17-4cd1-86d2-70fc23a35114.png',
-      'https://cdn.phototourl.com/member/2026-06-20-5527b7d3-403b-4523-b39c-9902bfb5cb3b.png',
-      'https://cdn.phototourl.com/member/2026-06-20-f0f72506-acae-40a5-b5d5-79bd8a4b726f.png',
-      'https://cdn.phototourl.com/member/2026-06-20-305ec99f-03e9-40f0-8886-008ad5998869.png',
-      'https://cdn.phototourl.com/member/2026-06-20-56086a6a-1b4b-4173-bed0-ba23ecebcb21.png',
-      'https://cdn.phototourl.com/member/2026-06-20-27ee0308-ffa2-4794-9247-9f9021182111.png',
-      'https://cdn.phototourl.com/member/2026-06-21-a6358150-e15c-4ba5-b87d-7bd7cce6de5f.jpg'
+      an21,
+      an22,
+      an23,
+      an24,
+      an25,
+      an26
     ],
     createdAt: Date.now() - 100000000
   },
@@ -197,16 +381,18 @@ export const INITIAL_PRODUCTS: Product[] = [
     name: 'Yamaha Aerox - Old',
     category: 'Motor',
     price: 40000,
-    description: 'Deskripsi Model Ada Di Slide Foto Terakhir',
+    description: 'Info lebih lengkap tentang model ini ada di discord!',
     stock: 2,
     images: [
-      'https://cdn.phototourl.com/member/2026-06-20-ee442c05-f4d5-4d21-bc94-b0ccc5e5fa5c.png',
-      'https://cdn.phototourl.com/member/2026-06-20-885a5e42-0d61-4e22-b5a9-646aade72799.png',
-      'https://cdn.phototourl.com/member/2026-06-21-e4b9f33d-7c48-49d9-b19a-4379e36c4bcc.png',
-      'https://cdn.phototourl.com/member/2026-06-20-ea4d3113-5311-49be-ab52-89a1fc6c4b2b.png',
-      'https://cdn.phototourl.com/member/2026-06-20-3c000ebe-bcc9-454d-ab69-8497ef83cfb9.png',
-      'https://cdn.phototourl.com/member/2026-06-20-88cb7535-cf77-4c86-ad41-c1425c6c3a7d.png',
-      'https://cdn.phototourl.com/member/2026-06-21-d2dc3d0e-122c-4e07-a681-37e46cac5385.jpg'
+      old,
+      old2,
+      old3,
+      old4,
+      old5,
+      old6,
+      old7,
+      old8,
+      old9
     ],
     createdAt: Date.now() - 40000
   },
@@ -215,16 +401,15 @@ export const INITIAL_PRODUCTS: Product[] = [
     name: 'Yamaha Mio Sporty - V1',
     category: 'Motor',
     price: 25000,
-    description: 'Deskripsi Model Ada Di Slide Foto Terakhir',
+    description: 'Info lebih lengkap tentang model ini ada di discord!',
     stock: 3,
     images: [
-      'https://cdn.phototourl.com/member/2026-06-20-bab35ec5-12ef-4af9-a6ab-1087a27d38b5.png',
-      'https://cdn.phototourl.com/member/2026-06-20-43162bb4-7a01-41fc-9aac-8ffcdb1ca8fc.png',
-      'https://cdn.phototourl.com/member/2026-06-20-3ae46ffb-8814-4f48-b3fd-6319a1a62037.png',
-      'https://cdn.phototourl.com/member/2026-06-20-d773d804-467c-4b40-a8ff-bab4cbaeb740.png',
-      'https://cdn.phototourl.com/member/2026-06-20-4de11a8f-2267-4180-a4e7-3d934694eedf.png',
-      'https://cdn.phototourl.com/member/2026-06-20-a8253af7-aea5-4dde-8b0d-47adba7d9ba9.png',
-      'https://cdn.phototourl.com/member/2026-06-21-1d5d8552-12a1-4824-b4ff-e76d75d62803.jpg'
+      miov1,
+      miov2,
+      miov3,
+      miov4,
+      miov5,
+      miov6
     ],
     createdAt: Date.now() - 25000
   },
@@ -233,18 +418,15 @@ export const INITIAL_PRODUCTS: Product[] = [
     name: 'Yamaha Mio Sporty - V2',
     category: 'Motor',
     price: 20000,
-    description: 'Deskripsi Model Ada Di Slide Foto Terakhir',
+    description: 'Info lebih lengkap tentang model ini ada di discord!',
     stock: 5,
     images: [
-      'https://cdn.phototourl.com/member/2026-06-20-42f654ba-19f2-4759-8201-a3eca19c33d3.png',
-      'https://cdn.phototourl.com/member/2026-06-20-4052fe29-bcaa-4b59-8a4f-256af0784f51.png',
-      'https://cdn.phototourl.com/member/2026-06-20-30a1da04-2631-4cbc-8722-47c240e2e004.png',
-      'https://cdn.phototourl.com/member/2026-06-20-e3b3b029-b43d-4e17-8fda-bb8b9fb961f2.png',
-      'https://cdn.phototourl.com/member/2026-06-20-0f452fcc-3571-49a2-9254-29d9a51995c2.png',
-      'https://cdn.phototourl.com/member/2026-06-20-43efb8be-724f-4495-b9b3-698ee4b1d47e.png',
-      'https://cdn.phototourl.com/member/2026-06-20-7ee3b7fc-28ef-493d-96a6-4bac6a0aa582.png',
-      'https://cdn.phototourl.com/member/2026-06-20-8cb698e1-1cce-4acd-b937-e684a06520ad.png',
-      'https://cdn.phototourl.com/member/2026-06-21-1e35595f-7aa3-4faf-a5e8-2e64ed1813df.jpg'
+      miov21,
+      miov22,
+      miov23,
+      miov24,
+      miov25,
+      miov26
     ],
     createdAt: Date.now() - 20000
   },
@@ -253,15 +435,14 @@ export const INITIAL_PRODUCTS: Product[] = [
     name: 'Yamaha Mio - Soul MX',
     category: 'Motor',
     price: 50000,
-    description: 'Deskripsi Model Ada Di Slide Foto Terakhir',
+    description: 'Info lebih lengkap tentang model ini ada di discord!',
     stock: 5,
     images: [
-      'https://cdn.phototourl.com/member/2026-06-21-1bbd6f75-b706-4fa3-95ef-ebb740c21792.png',
-      'https://cdn.phototourl.com/member/2026-06-21-56ed4aa1-2223-4a7e-817c-9477be30dfc4.png',
-      'https://cdn.phototourl.com/member/2026-06-21-0b15e9e8-205b-4580-839c-e4ae59b9cb2d.png',
-      'https://cdn.phototourl.com/member/2026-06-21-9c93fbaa-442e-453e-96b4-bb56879fb401.png',
-      'https://cdn.phototourl.com/member/2026-06-21-3bad50bb-40b1-4e71-b607-9586d0dd6af5.png',
-      'https://cdn.phototourl.com/member/2026-06-21-064c558c-4cbe-43b4-a010-648d3763790e.png'
+      soulmx,
+      soulmx2,
+      soulmx3,
+      soulmx4,
+      soulmx5
     ],
     createdAt: Date.now() - 50000
   },
@@ -270,14 +451,15 @@ export const INITIAL_PRODUCTS: Product[] = [
     name: 'Yamaha Xmax',
     category: 'Motor',
     price: 25000,
-    description: 'Deskripsi Model Ada Di Slide Foto Terakhir',
+    description: 'Info lebih lengkap tentang model ini ada di discord!',
     stock: 10,
     images: [
-      'https://cdn.phototourl.com/member/2026-06-20-b878816b-fec7-4202-87ce-d98f6226d903.png',
-      'https://cdn.phototourl.com/member/2026-06-20-231d1a72-f622-4300-b59b-93229348bb3c.png',
-      'https://cdn.phototourl.com/member/2026-06-20-9b1e4456-9aa5-40c7-876a-a464b4d1d341.png',
-      'https://cdn.phototourl.com/member/2026-06-20-3c07f768-96e5-4a8b-8b2c-f33cc9b1b1f0.png',
-      'https://cdn.phototourl.com/member/2026-06-21-9e81039f-d28b-4797-90b3-58ff74ae5d61.jpg'
+      xmax,
+      xmax2,
+      xmax3,
+      xmax4,
+      xmax5,
+      xmax6
     ],
     createdAt: Date.now() - 100000000
   },
@@ -286,14 +468,13 @@ export const INITIAL_PRODUCTS: Product[] = [
     name: 'Yamaha R - 15',
     category: 'Motor',
     price: 15000,
-    description: 'Deskripsi Model Ada Di Slide Foto Terakhir',
+    description: 'Info lebih lengkap tentang model ini ada di discord!',
     stock: 5,
     images: [
-      'https://cdn.phototourl.com/member/2026-06-20-faa41496-71de-4b3d-ae26-499ed1c153c1.png',
-      'https://cdn.phototourl.com/member/2026-06-20-711d49ce-7a1f-4851-bd06-48e7288cec14.png',
-      'https://cdn.phototourl.com/member/2026-06-20-957c8659-45d5-4a96-9c11-5ed3da8b1fad.png',
-      'https://cdn.phototourl.com/member/2026-06-20-cb3ac34c-3605-4ae5-9009-c5412082d892.png',
-      'https://cdn.phototourl.com/member/2026-06-21-4060b425-ce9d-43ea-94f5-8a58a3386fae.png'
+      r15,
+      r152,
+      r153,
+      r154,
     ],
     createdAt: Date.now() - 15000
   },
@@ -302,15 +483,14 @@ export const INITIAL_PRODUCTS: Product[] = [
     name: 'GL - Rangka Bebas',
     category: 'Motor',
     price: 10000,
-    description: 'Deskripsi Model Ada Di Slide Foto Terakhir',
+    description: 'Info lebih lengkap tentang model ini ada di discord!',
     stock: 10,
     images: [
-      'https://cdn.phototourl.com/member/2026-06-20-7d5bce64-4151-41e4-a0ff-d2d98829a514.png',
-      'https://cdn.phototourl.com/member/2026-06-20-c0aaf944-d2cc-4874-a796-d531840ee7cc.png',
-      'https://cdn.phototourl.com/member/2026-06-20-fa4e96ed-9bed-40bc-a681-433391018ef4.png',
-      'https://cdn.phototourl.com/member/2026-06-20-5eecf2c0-5941-4476-bd2c-04027f82d9e9.png',
-      'https://cdn.phototourl.com/member/2026-06-20-62f788de-59d6-4336-b3e0-05e64fa7d93d.png',
-      'https://cdn.phototourl.com/member/2026-06-21-510f5f34-265e-4edc-861c-7972f49ba143.png'
+      gl,
+      gl2,
+      gl3,
+      gl4,
+      gl5
     ],
     createdAt: Date.now() - 100000000
   },  
@@ -322,7 +502,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     description: 'Universal All Motor.',
     stock: 5,
     images: [
-      'https://cdn.phototourl.com/free/2026-06-16-caebdaf8-3d57-4b63-9825-f312b94bfc7e.png'
+      shafer
     ],
     createdAt: Date.now() - 20000
   },
@@ -334,7 +514,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     description: 'Universal All Motor.',
     stock: 10,
     images: [
-      'https://cdn.phototourl.com/free/2026-06-16-6a24c0de-a725-492e-8e36-732ab6250063.png'
+      handgrip
     ],
     createdAt: Date.now() - 10000
   },
@@ -346,7 +526,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     description: 'Universal All Motor.',
     stock: 10,
     images: [
-      'https://cdn.phototourl.com/free/2026-06-16-925bdc01-2eea-4263-a428-81b18f5e92da.jpg'
+      framecnc
     ],
     createdAt: Date.now() - 10000
   },
@@ -358,7 +538,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     description: 'Universal All Motor ( bukan buat motor yang saklarnya nyatu )',
     stock: 10,
     images: [
-      'https://cdn.phototourl.com/free/2026-06-16-ea09a8a7-4ede-406c-94e3-334141716c64.jpg'
+      saklarv
     ],
     createdAt: Date.now() - 10000
   },
@@ -370,9 +550,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     description: 'Fit ke motor yang space headlamp nya besar ( seperti vario, nmax, pcx, dll )',
     stock: 5,
     images: [
-      'https://cdn.phototourl.com/free/2026-06-16-4a0cc7f2-a9c2-4f34-9d06-4a89f1240f52.png',
-      'https://cdn.phototourl.com/free/2026-06-16-6da4be3b-7834-439b-b6a8-d022ed96bad9.png',
-      'https://cdn.phototourl.com/member/2026-06-20-cf8ed9e0-f328-40c7-a045-c1b86d82b23a.png'
+      hypervision
     ],
     createdAt: Date.now() - 35000
   },
@@ -384,7 +562,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     description: 'Untuk Motor Vario',
     stock: 5,
     images: [
-      'https://cdn.phototourl.com/free/2026-06-16-e379bc42-b10e-4c7c-bd92-fb0e45a01a86.png'
+      beheltitan
     ],
     createdAt: Date.now() - 25000
   },
@@ -396,7 +574,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     description: 'Untuk Motor Vario',
     stock: 10,
     images: [
-      'https://cdn.phototourl.com/member/2026-06-16-6d783595-fc6b-4ace-afb8-10aba16badb5.jpg'
+      bordershi
     ],
     createdAt: Date.now() - 10000
   },
@@ -408,7 +586,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     description:  'Untuk Motor Vario',
     stock: 5,
     images: [
-      'https://cdn.phototourl.com/member/2026-06-16-65ef9be8-d33c-4b1e-9e99-4710ac4299cf.png'
+      armtzm
     ],
     createdAt: Date.now() - 25000
   },
@@ -420,9 +598,9 @@ export const INITIAL_PRODUCTS: Product[] = [
     description: 'Universal ( breket bisa digeser ) & dapet versi burn titanium',
     stock: 5,
     images: [
-      'https://cdn.phototourl.com/member/2026-06-21-69e32ff6-8d81-401d-bbd5-d9fdfe3fd194.png',
-      'https://cdn.phototourl.com/member/2026-06-21-010098c8-9840-4172-bda5-852283e3574e.png',
-      'https://cdn.phototourl.com/member/2026-06-21-c1f0b447-e2d6-4f95-9f47-733f4cbc0237.png'
+      dslkenochi,
+      dslkenochi2,
+      dslkenochi3
     ],
     createdAt: Date.now() - 25000
   },
@@ -434,8 +612,8 @@ export const INITIAL_PRODUCTS: Product[] = [
     description: 'Untuk Vario Non Arm',
     stock: 5,
     images: [
-      'https://cdn.phototourl.com/member/2026-06-20-ed10ad6f-a075-47c5-a8a4-b344fc7ac1e0.png',
-      'https://cdn.phototourl.com/member/2026-06-20-2ed62f44-671c-450a-801f-fcc4dba61ef3.png'
+      ox2,
+      ox22
     ],
     createdAt: Date.now() - 10000
   },
@@ -447,8 +625,8 @@ export const INITIAL_PRODUCTS: Product[] = [
     description: 'Untuk Motor Vario',
     stock: 5,
     images: [
-      'https://cdn.phototourl.com/member/2026-06-16-523998f7-dd7d-4387-abcc-7a69b61cbce7.png',
-      'https://cdn.phototourl.com/member/2026-06-20-898b8807-8e52-4874-8ead-0cc769a568d1.png'
+      formulasunblast,
+      formulasunblast2
     ],
     createdAt: Date.now() - 30000
   },
@@ -460,8 +638,8 @@ export const INITIAL_PRODUCTS: Product[] = [
     description: 'Untuk Motor Vario',
     stock: 5,
     images: [
-      'https://cdn.phototourl.com/member/2026-06-16-ddbe7595-d350-4d66-a265-bd47d713dc0a.png',
-      'https://cdn.phototourl.com/member/2026-06-16-2e1810df-49e9-4053-80b6-0d9ad9b44d66.png'
+      formulasemi,
+      formulasemi2
     ],
     createdAt: Date.now() - 10000
   },
@@ -473,10 +651,10 @@ export const INITIAL_PRODUCTS: Product[] = [
     description: 'Untuk Motor Vario',
     stock: 10,
     images: [
-      'https://cdn.phototourl.com/member/2026-06-20-b3b12dcd-21a4-481c-aef8-785f840ff793.png',
-      'https://cdn.phototourl.com/member/2026-06-17-f0e2bf19-f973-4d13-9d8a-dd2089197a65.png',
-      'https://cdn.phototourl.com/member/2026-06-17-6f2caefa-f9d0-4d4b-9f74-77c7594204f0.png',
-      'https://cdn.phototourl.com/member/2026-06-20-263d23ff-9747-4c7e-9ce3-a0af5c709283.png'
+      drsviola,
+      drsviola2,
+      drsviola3,
+      drsviola4
     ],
     createdAt: Date.now() - 15000
   },
@@ -488,10 +666,10 @@ export const INITIAL_PRODUCTS: Product[] = [
     description: 'Universal Matic ( Breket Bisa Digeser )',
     stock: 10,
     images: [
-      'https://cdn.phototourl.com/member/2026-06-20-5f23ebde-eb54-4b2d-b739-e14a3b97a3d1.png',
-      'https://cdn.phototourl.com/member/2026-06-17-ee7f9d45-b4e5-4304-80b4-c59ba07f7ec1.png',
-      'https://cdn.phototourl.com/member/2026-06-20-2db308d2-dfc5-45c4-b9b2-291d9183729d.png',
-      'https://cdn.phototourl.com/member/2026-06-17-b3bf017c-56db-4047-b0aa-e177b49670c2.png'
+      ermthai,
+      ermthai2,
+      ermthai3,
+      ermthai4
     ],
     createdAt: Date.now() - 25000
   },
@@ -503,7 +681,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     description: 'Untuk Motor Vario',
     stock: 10,
     images: [
-      'https://cdn.phototourl.com/member/2026-06-17-037eec33-454b-4f19-a932-c9e25de55310.jpg'
+      armnusan
     ],
     createdAt: Date.now() - 30000
   },
@@ -515,10 +693,10 @@ export const INITIAL_PRODUCTS: Product[] = [
     description: 'Untuk Motor Vario',
     stock: 10,
     images: [
-      'https://cdn.phototourl.com/member/2026-06-20-8f05cfce-31a8-4a50-a006-4744b206a109.png',
-      'https://cdn.phototourl.com/member/2026-06-18-b0d4c62b-3156-45e0-bfbb-8a6fa281f455.png',
-      'https://cdn.phototourl.com/member/2026-06-20-082f2176-2df6-4d29-a8cf-375141b37193.png',
-      'https://cdn.phototourl.com/member/2026-06-18-9b65ec70-81b6-43e8-84f1-6e90d16e6b08.png'
+      rsevens,
+      rsevens2,
+      rsevens3,
+      rsevens4
     ],
     createdAt: Date.now() - 20000
   },
@@ -530,8 +708,8 @@ export const INITIAL_PRODUCTS: Product[] = [
     description: 'Universal Matic',
     stock: 10,
     images: [
-      'https://cdn.phototourl.com/member/2026-06-18-bc178fd1-6312-417a-b801-46568083b8ff.jpg',
-      'https://cdn.phototourl.com/member/2026-06-21-dd48cc27-c751-438f-9e48-531f4fcf6a05.jpg'
+      bremborcs,
+      bremborcs2
     ],
     createdAt: Date.now() - 15000
   },
@@ -543,7 +721,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     description: 'Universal',
     stock: 10,
     images: [
-      'https://cdn.phototourl.com/member/2026-06-18-5012290c-0b26-47c6-a27b-e61eed259063.jpg'
+      kaliperaurora
     ],
     createdAt: Date.now() - 20000
   },
@@ -555,7 +733,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     description: 'Untuk Motor Vario',
     stock: 10,
     images: [
-      'https://cdn.phototourl.com/member/2026-06-20-c5cc54fa-6c69-443d-83ef-3a1d5cd6141f.png'
+      nathongvario
     ],
     createdAt: Date.now() - 20000
   },
@@ -567,7 +745,8 @@ export const INITIAL_PRODUCTS: Product[] = [
     description: 'Untuk All Motor Aerox',
     stock: 10,
     images: [
-      'https://cdn.phototourl.com/member/2026-06-18-fe62d10c-3316-4f69-9722-0eb2d16e4ebe.jpg'
+      nathongaerox,
+      nathongaerox2
     ],
     createdAt: Date.now() - 20000
   },
@@ -579,9 +758,9 @@ export const INITIAL_PRODUCTS: Product[] = [
     description: 'Untuk Motor Vario',
     stock: 10,
     images: [
-      'https://cdn.phototourl.com/member/2026-06-20-5a68e381-d5a3-4f90-8959-98154edac110.jpg',
-      'https://cdn.phototourl.com/member/2026-06-18-3545407f-3c7c-4ca7-aabc-8f3a0644da11.jpg',
-      'https://cdn.phototourl.com/member/2026-06-18-0e726d03-a9dc-426a-bf21-3859515506b1.jpg'
+      jokpanda,
+      jokpanda2,
+      jokpanda3
     ],
     createdAt: Date.now() - 15000
   },
@@ -593,10 +772,10 @@ export const INITIAL_PRODUCTS: Product[] = [
     description: 'Sudah Include Semuanya ( Shock, Oc, Dll Yang Ada Di Foto )',
     stock: 10,
     images: [
-      'https://cdn.phototourl.com/member/2026-06-18-71c236b4-b00b-48d9-a748-fe18c9fc67c2.png',
-      'https://cdn.phototourl.com/member/2026-06-18-c6fa5bcd-db15-4ed5-9d64-d7dd46f2b580.png',
-      'https://cdn.phototourl.com/member/2026-06-20-7319305a-42cb-4bf5-9673-4cf6a4a024e1.png',
-      'https://cdn.phototourl.com/member/2026-06-20-335ff251-bf64-4233-832d-a0bc8bd86920.png'
+      enginevario,
+      enginevario2,
+      enginevario3,
+      enginevario4
     ],
     createdAt: Date.now() - 20000
   },
@@ -608,7 +787,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     description: 'Universal',
     stock: 10,
     images: [
-      'https://cdn.phototourl.com/member/2026-06-20-34c0222c-6b4d-48f3-96ad-528b72e6880c.jpg'
+      akront
     ],
     createdAt: Date.now() - 30000
   },
@@ -620,9 +799,9 @@ export const INITIAL_PRODUCTS: Product[] = [
     description: 'Universal',
     stock: 10,
     images: [
-      'https://cdn.phototourl.com/member/2026-06-18-6b4c7203-6dd9-4b61-99b1-547c7891a269.jpg',
-      'https://cdn.phototourl.com/member/2026-06-20-d0564256-c449-4b9f-84fc-ddc236793d99.jpg',
-      'https://cdn.phototourl.com/member/2026-06-20-ac31c0bb-b138-44c6-a964-0b9e7b209dec.jpg'
+      kingu,
+      kingu2,
+      kingu3
     ],
     createdAt: Date.now() - 20000
   },
@@ -634,9 +813,9 @@ export const INITIAL_PRODUCTS: Product[] = [
     description: 'Universal Matic',
     stock: 10,
     images: [
-      'https://cdn.phototourl.com/member/2026-06-18-5694bbb5-789c-4ba8-9a6c-fca660af6521.png',
-      'https://cdn.phototourl.com/member/2026-06-20-6ef5cc8e-d743-4831-90f6-3d376f4972ce.png',
-      'https://cdn.phototourl.com/member/2026-06-18-01cc8046-dc5d-4326-aaee-f2f5a074a63d.png'
+      sixstar,
+      sixstar2,
+      sixstar3
     ],
     createdAt: Date.now() - 30000
   },
@@ -648,8 +827,8 @@ export const INITIAL_PRODUCTS: Product[] = [
     description: 'Universal',
     stock: 5,
     images: [
-      'https://cdn.phototourl.com/member/2026-06-18-c907fc3f-f240-47c4-929c-8b2b6564ac13.png',
-      'https://cdn.phototourl.com/member/2026-06-18-91b3dde7-5533-458e-abbf-1c6adc2dcd8b.png'
+      jaribubut,
+      jaribubut2
     ],
     createdAt: Date.now() - 20000
   },
